@@ -74,7 +74,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path', // Нужно будет свой путь написать
+      pattern: 'https://github.com/Vova3141592/gym-website/edit/main/scientific-gym/:path',
       text: 'Редактировать эту страницу на GitHub'
     },
 
