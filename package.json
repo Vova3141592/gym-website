@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev scientific-gym",
+    "docs:build": "vitepress build scientific-gym",
+    "docs:preview": "vitepress preview scientific-gym"
+  }
+}
