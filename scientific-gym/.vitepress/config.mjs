@@ -12,13 +12,19 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Главная', link: '/' },
-      { text: 'Новости', link: '/news' },
-      { text: 'О проекте', link: '/about' },
       {
         text: 'Накачаться',
         items: [
-          { text: 'Парням', link: '/boys/muscle-growth-factors/training-volume' },
-          { text: 'Девушкам', link: '/girls/muscle-growth-factors/training-volume' },
+          { text: 'Парням', link: '/boys/introduction/how-to-gain-muscle' },
+          { text: 'Девушкам', link: '/girls/introduction/how-to-gain-muscle' },
+        ]
+      },
+      {
+        text: 'О проекте',
+        items: [
+          { text: 'FAQ', link: '/about/faq' },
+          { text: 'Научный подход', link: '/about/why-science-based' },
+          { text: 'Написать статью', link: '/about/participate' },
         ]
       },
     ],
@@ -54,22 +60,17 @@ export default defineConfig({
       }
     },
 
-    outline: false,
-
     socialLinks: [
       { icon: 'vk', link: 'https://vk.com/vova3141592' },
       { icon: 'telegram', link: 'https://t.me/vova3141592' },
     ],
-
-    externalLinkIcon: true,
 
     //Перевод надписей на русский
 
     lastUpdated: {
       text: 'Обновлено',
       formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'short'
+        dateStyle: 'long'
       }
     },
 
@@ -100,10 +101,16 @@ export default defineConfig({
     sidebar: {
       '/boys/': [
         {
+          text: 'Введение',
+          items: [
+            { text: 'Как накачаться?', link: '/boys/introduction/how-to-gain-muscle' },
+          ]
+        },
+        {
           text: 'Условия роста мышц',
           items: [
-            { text: 'Тренировочный объём', link: '/boys/muscle-growth-factors/training-volume' },
-            { text: 'Близость к отказу', link: '/boys/muscle-growth-factors/close-to-failure' },
+            { text: 'Объём тренировок', link: '/boys/muscle-growth-factors/training-volume' },
+            { text: 'Мышечный отказ', link: '/boys/muscle-growth-factors/close-to-failure' },
             { text: 'Диапазон повторений', link: '/boys/muscle-growth-factors/repetition-range' },
             { text: 'Увеличение нагрузки', link: '/boys/muscle-growth-factors/progressive-overload' },
             { text: 'Восстановление', link: '/boys/muscle-growth-factors/recovery' },
@@ -133,13 +140,6 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Защита от травм',
-          items: [
-            { text: 'Разминка', link: '/boys/injury-prevention/warm-up' },
-            { text: 'Правила выполнения упражнений', link: '/boys/injury-prevention/exercise-rules' },
-          ]
-        },
-        {
           text: 'Питание',
           items: [
             { text: 'Массонабор', link: '/boys/nutrition/bulking' },
@@ -154,6 +154,20 @@ export default defineConfig({
             { text: 'Протеин', link: '/boys/supplements/protein' },
             { text: 'Кофеин', link: '/boys/supplements/caffeine' },
             { text: 'Другие добавки', link: '/boys/supplements/other-supplements' },
+          ]
+        },
+        {
+          text: 'Защита от травм',
+          items: [
+            { text: 'Разминка', link: '/boys/injury-prevention/warm-up' },
+            { text: 'Правила выполнения упражнений', link: '/boys/injury-prevention/exercise-rules' },
+          ]
+        },
+        {
+          text: 'Как выглядеть круче',
+          items: [
+            { text: 'Одежда', link: '/boys/how-to-look-cooler/clothes' },
+            { text: 'Как сфотографироваться', link: '/boys/how-to-look-cooler/photo' },
           ]
         },
         {
@@ -180,20 +194,19 @@ export default defineConfig({
             { text: 'Составляем курс', link: '/boys/pharmacology/charting-a-course' },
           ]
         },
-        {
-          text: 'Как выглядеть круче',
-          items: [
-            { text: 'Одежда', link: '/boys/how-to-look-cooler/clothes' },
-            { text: 'Как сфотографироваться', link: '/boys/how-to-look-cooler/photo' },
-          ]
-        },
       ],
       '/girls/': [
         {
+          text: 'Введение',
+          items: [
+            { text: 'Как накачаться?', link: '/girls/introduction/how-to-gain-muscle' },
+          ]
+        },
+        {
           text: 'Условия роста мышц',
           items: [
-            { text: 'Тренировочный объём', link: '/girls/muscle-growth-factors/training-volume' },
-            { text: 'Близость к отказу', link: '/girls/muscle-growth-factors/close-to-failure' },
+            { text: 'Объём тренировок', link: '/girls/muscle-growth-factors/training-volume' },
+            { text: 'Мышечный отказ', link: '/girls/muscle-growth-factors/close-to-failure' },
             { text: 'Диапазон повторений', link: '/girls/muscle-growth-factors/repetition-range' },
             { text: 'Увеличение нагрузки', link: '/girls/muscle-growth-factors/progressive-overload' },
             { text: 'Восстановление', link: '/girls/muscle-growth-factors/recovery' },
@@ -222,13 +235,6 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Защита от травм',
-          items: [
-            { text: 'Разминка', link: '/girls/injury-prevention/warm-up' },
-            { text: 'Правила выполнения упражнений', link: '/girls/injury-prevention/exercise-rules' },
-          ]
-        },
-        {
           text: 'Питание',
           items: [
             { text: 'Массонабор', link: '/girls/nutrition/bulking' },
@@ -243,6 +249,20 @@ export default defineConfig({
             { text: 'Протеин', link: '/girls/supplements/protein' },
             { text: 'Кофеин', link: '/girls/supplements/caffeine' },
             { text: 'Другие добавки', link: '/girls/supplements/other-supplements' },
+          ]
+        },
+        {
+          text: 'Защита от травм',
+          items: [
+            { text: 'Разминка', link: '/girls/injury-prevention/warm-up' },
+            { text: 'Правила выполнения упражнений', link: '/girls/injury-prevention/exercise-rules' },
+          ]
+        },
+        {
+          text: 'Как выглядеть круче',
+          items: [
+            { text: 'Одежда', link: '/girls/how-to-look-cooler/clothes' },
+            { text: 'Как сфотографироваться', link: '/girls/how-to-look-cooler/photo' },
           ]
         },
         {
@@ -267,13 +287,6 @@ export default defineConfig({
             },
             { text: 'Минимизируем побочные эффекты', link: '/girls/pharmacology/minimising-side-effects' },
             { text: 'Составляем курс', link: '/girls/pharmacology/charting-a-course' },
-          ]
-        },
-        {
-          text: 'Как выглядеть круче',
-          items: [
-            { text: 'Одежда', link: '/girls/how-to-look-cooler/clothes' },
-            { text: 'Как сфотографироваться', link: '/girls/how-to-look-cooler/photo' },
           ]
         },
       ],
