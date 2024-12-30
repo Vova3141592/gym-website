@@ -3,6 +3,7 @@ layout: doc
 sidebar: false
 aside: false
 editLink: false
+lastUpdated: false
 ---
 
 <script setup>
